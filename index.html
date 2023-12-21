@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+<header class="header">
+  <a class="register-link" href="./register.html">Register</a>
+  <a class="login-link" href="./login.html">Login</a>
+</header>
+    <title>Tuscany</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+        <div class="img-container">
+          <img
+            src="https://imgs.search.brave.com/SdzJ3xWQgUPH0uSgijRVTdO46420Na1YZ76ZshP5Pec/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtcGxhdGZvcm0u/OTlzdGF0aWMuY29t/Ly9yd1UwSmg0UHY4/YlJDNVJzMkRiTDM5/MHRuaTA9LzQ1OHgz/OTQ6MTM0MngxMjc4/L2ZpdC1pbi81MDB4/NTAwLzk5ZGVzaWdu/cy1jb250ZXN0cy1h/dHRhY2htZW50cy8x/MjUvMTI1Mzk5L2F0/dGFjaG1lbnRfMTI1/Mzk5MDQz"
+            alt="Brand Image"
+            class="brand-img"
+          />
+          <h2>Tuscany</h2>
+        </div>
+      </div>
+      <div class="column">
+        <form id="bookingForm">
+          <label for="whereTo">Where to:</label>
+          <select id="whereTo" name="whereTo">
+            <option value="place1">Tokyo</option>
+            <option value="place2">New York</option>
+            <option value="place3">Switzerland</option></select
+          ><br /><br />
+          <label for="persons">How Many Persons:</label>
+          <input type="number" id="persons" name="persons" /><br /><br />
+          <label for="startDate">Start Date:</label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            min="2023-11-18"
+          /><br /><br />
+          <label for="endDate">End Date:</label>
+          <input
+            type="date"
+            id="endDate"
+            name="endDate"
+            min="2023-11-18"
+          /><br /><br />
+          <label for="description">Description:</label><br />
+          <textarea
+            id="description"
+            name="description"
+            minlength="50"
+            maxlength="500"
+          ></textarea
+          ><br /><br />
+          <input type="submit" value="Book Now" onclick="validateForm()" />
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="package">
+          <img
+            src="https://t3.ftcdn.net/jpg/02/65/23/70/360_F_265237090_Muthvb72m2POYFjyx7F5UCQLh9JdBtKN.jpg"
+            alt="Tokyo Image"
+          />
+          <h3>Tokyo</h3>
+          <p>
+            Mixes the ultramodern and the traditional, from neon-lit skyscrapers
+            to historic temples
+          </p>
+          <p>Price: $1000</p>
+          <p>Rating: 4.5</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="package">
+          <img
+            src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQBpZC4GzF2EB7lXhul2dHfVjyc3ZBKnOruMkR9BIiy-mHkaIYKBkQyFF1kooAmeTMrlWQ24ah1kMCrZ-8OKGyKWmcVZPVKsUEFO3GnHw"
+            alt="New York Image"
+          />
+          <h3>New York</h3>
+          <p>
+            New York City comprises 5 boroughs sitting where the Hudson River
+            meets the Atlantic Ocean
+          </p>
+          <p>Price: $1200</p>
+          <p>Rating: 4.3</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="package">
+          <img
+            src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcT7ySn-T-wr4c4La9p2YctxfNR8H4OinRbh5q2jXmJYMuxSkuUwEyHyJkySOz28ptyfymqxV8-PlEIC9T4oWEl-HmOdHf-jJjHPRks2CA"
+            alt="Switzerland Image"
+          />
+          <h3>Switzerland</h3>
+          <p>
+            Switzerland is a mountainous Central European country, home to
+            numerous lakes, villages and the high peaks of the Alps. Its cities
+            contain medieval quarters, with landmarks like capital Bern’s
+            Zytglogge clock tower and Lucerne’s wooden chapel bridge.
+          </p>
+          <p>Price: $1300</p>
+          <p>Rating: 4.6</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Services</h2>
+      <ul>
+        <li>Affordable Hotel</li>
+        <li>Food & Drinks</li>
+        <li>Safety Guide</li>
+      </ul>
+    </div>
+    <section class="gallery">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="card-gallery">
+          <div class="card">
+            <img src="./Images/beach2.jpg" class="img-fluid" alt="Beach">
+          </div>
+          <div class="card">
+            <img src="./Images/flowers.jpg" class="img-fluid" alt="Flowers">
+          </div>
+          <div class="card">
+            <img src="./Images/water-fall.jpg" class="img-fluid" alt="Flowers">
+          </div>
+          <div class="card">
+            <img src="./Images/mountains.jpg" class="img-fluid" alt="Flowers">
+          </div>
+          <div class="card">
+            <img src="./Images/vietnam.webp" class="img-fluid" alt="Flowers">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://imgs.search.brave.com/SdzJ3xWQgUPH0uSgijRVTdO46420Na1YZ76ZshP5Pec/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtcGxhdGZvcm0u/OTlzdGF0aWMuY29t/Ly9yd1UwSmg0UHY4/YlJDNVJzMkRiTDM5/MHRuaTA9LzQ1OHgz/OTQ6MTM0MngxMjc4/L2ZpdC1pbi81MDB4/NTAwLzk5ZGVzaWdu/cy1jb250ZXN0cy1h/dHRhY2htZW50cy8x/MjUvMTI1Mzk5L2F0/dGFjaG1lbnRfMTI1/Mzk5MDQz" alt="Image of the Tuscan countryside">
+      </div>
+      <div class="col-md-6">
+        <h2>Tuscany: Immerse Yourself in the Heart of Italy</h2>
+        <p>
+          Tuscany is a brand that evokes the essence of Italian beauty and culture. Its target audience is primarily individuals who are passionate about travel and eager to explore the rich history, stunning landscapes, and vibrant art scene of this iconic region. Tuscany caters to various demographics within the travel segment, including:
+        </p>
+        <ul>
+          <li>Luxury travelers</li>
+          <li>Cultural enthusiasts</li>
+          <li>Foodies and wine lovers</li>
+          <li>Nature lovers</li>
+        </ul>
+        <p>
+          Additionally, Tuscany caters to specific interests such as:
+        </p>
+        <ul>
+          <li>Wellness travelers</li>
+          <li>Art enthusiasts</li>
+          <li>History buffs</li>
+          <li>Slow travel enthusiasts</li>
+        </ul>
+        <p>
+          By offering something for everyone, Tuscany has established itself as a leading destination for discerning travelers seeking an unforgettable Italian experience.
+        </p>
+      </div>
+    </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="brand-name">
+   Tuscany
+        </div>
+        <div class="social-icons">
+          <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Instagram" class="social-media-img"></a>
+          <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" alt="Facebook" class="social-media-img"></a>
+        </div>
+        <div class="copyright">
+          &copy; All Rights Reserved. Tuscany 2023
+        </div>
+      </div>
+    </footer>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
