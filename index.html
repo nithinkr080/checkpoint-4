@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="style.css" />
-<header class="header">
-  <a class="register-link" href="./register.html">Register</a>
-  <a class="login-link" href="./login.html">Login</a>
-</header>
     <title>Tuscany</title>
   </head>
   <body>
-    <div class="row">
-      <div class="column">
+    <header class="header">
+      <div>
         <div class="img-container">
           <img
             src="https://imgs.search.brave.com/SdzJ3xWQgUPH0uSgijRVTdO46420Na1YZ76ZshP5Pec/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtcGxhdGZvcm0u/OTlzdGF0aWMuY29t/Ly9yd1UwSmg0UHY4/YlJDNVJzMkRiTDM5/MHRuaTA9LzQ1OHgz/OTQ6MTM0MngxMjc4/L2ZpdC1pbi81MDB4/NTAwLzk5ZGVzaWdu/cy1jb250ZXN0cy1h/dHRhY2htZW50cy8x/MjUvMTI1Mzk5L2F0/dGFjaG1lbnRfMTI1/Mzk5MDQz"
@@ -23,7 +19,31 @@
           <h2>Tuscany</h2>
         </div>
       </div>
-      <div class="column">
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Book</a></li>
+          <li class="dropdown">
+            <a href="#">Packages</a>
+            <div class="dropdown-content">
+              <a href="#">United States</a>
+              <a href="#">India</a>
+              <a href="#">France</a>
+              <a href="#">Germany</a>
+            </div>
+          </li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div>
+      <a class="register-link" href="./register.html">Register</a>
+      <a class="login-link" href="./login.html">Login</a>
+    </div>
+    </header>
+    <div class="booking-row">
+      <div class="booking-column">
         <form id="bookingForm">
           <label for="whereTo">Where to:</label>
           <select id="whereTo" name="whereTo">
@@ -59,9 +79,8 @@
         </form>
       </div>
     </div>
-
-    <div class="row">
-      <div class="column">
+    <div class="package-row">
+      <div class="package-column">
         <div class="package">
           <img
             src="https://t3.ftcdn.net/jpg/02/65/23/70/360_F_265237090_Muthvb72m2POYFjyx7F5UCQLh9JdBtKN.jpg"
@@ -74,12 +93,12 @@
           </p>
           <p>Price: $1000</p>
           <p>Rating: 4.5</p>
-          <button>Book Now</button>
+          <button class="book-now-btn">Book Now</button>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="column">
+    <div class="package-row">
+      <div class="package-column">
         <div class="package">
           <img
             src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQBpZC4GzF2EB7lXhul2dHfVjyc3ZBKnOruMkR9BIiy-mHkaIYKBkQyFF1kooAmeTMrlWQ24ah1kMCrZ-8OKGyKWmcVZPVKsUEFO3GnHw"
@@ -96,8 +115,8 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="column">
+    <div class="package-row">
+      <div class="package-column">
         <div class="package">
           <img
             src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcT7ySn-T-wr4c4La9p2YctxfNR8H4OinRbh5q2jXmJYMuxSkuUwEyHyJkySOz28ptyfymqxV8-PlEIC9T4oWEl-HmOdHf-jJjHPRks2CA"
