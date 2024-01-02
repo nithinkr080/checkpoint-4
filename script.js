@@ -1,5 +1,4 @@
 function validateForm() {
-  // Basic validation example
   const form = document.getElementById("bookingForm");
   const whereTo = form.elements["whereTo"].value;
   const persons = form.elements["persons"].value;
@@ -16,16 +15,79 @@ function validateForm() {
   }
 }
 
+function validateFullName(name) {
+  return name.length;
+}
+function validateContact(contact) {
+  return /^\d+$/.test(contact);
+}
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+function validatePassword(password) {
+  return password.length >= 8;
+}
+
+//login
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("loginForm");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (validateLoginForm()) {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      const storedEmail = sessionStorage.getItem("email");
+      const storedPassword = sessionStorage.getItem("password");
+      console.log("email", email);
+      console.log("storedEmail", storedEmail);
+      if (email == storedEmail && password == storedPassword) {
+        alert("Login successful!");
+        console.log("document.location", document.location);
+        window.location.href = "/";
+      } else {
+        alert("Wrong details");
+      }
+      form.reset();
+    }
+  });
+
+  function validateLoginForm() {
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (email === "" || password === "") {
+      alert("Please fill in all fields.");
+      return false;
+    }
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+    if (!validatePassword(password)) {
+      alert("Password should be at least 8 characters long.");
+      return false;
+    }
+    return true;
+  }
+});
+
+//register
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registrationForm");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (validateRegisterForm()) {
-      // You can handle the form submission here
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("password", password);
       alert("Registration successful!");
       form.reset();
     }
   });
+
   function validateRegisterForm() {
     const fullname = document.getElementById("fullname").value.trim();
     const contact = document.getElementById("contact").value.trim();
@@ -61,22 +123,5 @@ document.addEventListener("DOMContentLoaded", function () {
       return false;
     }
     return true;
-  }
-  function validateFullName(name) {
-    // Simple validation for full name: Should contain at least 2 words
-    return name.length;
-  }
-  function validateContact(contact) {
-    // Simple validation for contact number: Should contain only numbers
-    return /^\d+$/.test(contact);
-  }
-  function validateEmail(email) {
-    // Regular expression for basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-  function validatePassword(password) {
-    // Simple validation for password length
-    return password.length >= 8;
   }
 });

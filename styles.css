@@ -218,14 +218,14 @@ textarea {
 }
 
 .package-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 0.33fr)); 
+  gap: 20px; 
 }
 
 .package-column {
-  width: calc(33.33% - 20px); /* Adjust the width as needed */
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .package {
@@ -233,7 +233,7 @@ textarea {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  width: 100%; /* Ensure each package takes full width within the column */
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -241,6 +241,7 @@ textarea {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
+  max-height: 240px;
 }
 
 .package h3 {
