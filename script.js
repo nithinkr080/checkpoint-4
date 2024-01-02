@@ -79,8 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (validateRegisterForm()) {
+      const fullname = document.getElementById("fullname").value.trim();
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
+      sessionStorage.setItem("fullname", fullname);
       sessionStorage.setItem("email", email);
       sessionStorage.setItem("password", password);
       alert("Registration successful!");
