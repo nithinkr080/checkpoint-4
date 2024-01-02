@@ -40,14 +40,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const storedEmail = sessionStorage.getItem("email");
       const storedPassword = sessionStorage.getItem("password");
-      console.log("email", email);
-      console.log("storedEmail", storedEmail);
       if (email == storedEmail && password == storedPassword) {
-        alert("Login successful!");
+        sessionStorage.setItem("isLogin", true);
         console.log("document.location", document.location);
+        alert("Login successful!");
         window.location.href = "/";
       } else {
-        alert("Wrong details");
+        alert("User dosen't exist");
       }
       form.reset();
     }
@@ -127,3 +126,23 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isLogin = sessionStorage.getItem("isLogin");
+  if (isLogin) {
+    const registerBtn = document.getElementById("register-btn");
+    registerBtn.remove();
+    const loginBtn = document.getElementById("login-btn");
+    loginBtn.remove();
+    const name = sessionStorage.getItem("fullname");
+    const para = "Hello " + name;
+    const userName = document.getElementById("user-name");
+    userName.append(para);
+  } else {
+    document.getElementById("logout-btn").remove();
+  }
+});
+
+const logOut = () => {
+  sessionStorage.clear();
+};
